@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Códice Fusion | Ropa Deportiva de Alto Rendimiento Táchira</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.com/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --emerald-main: #1E5D4B;
+            --emerald-light: #157F5D;
+            --navy-deep: #1A2A3A;
+            --navy-dark: #0F1823;
+            --mint-accent: #34D399;
+            --mint-hover: #10B981;
+            --bg-light: #F8FAFC;
+            --bg-mint-soft: #E6F4F0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--navy-dark);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6, .brand-font {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Color Utility Classes */
+        .bg-emerald { background-color: var(--emerald-main) !important; }
+        .bg-emerald-light { background-color: var(--emerald-light) !important; }
+        .bg-navy { background-color: var(--navy-deep) !important; }
+        .bg-navy-dark { background-color: var(--navy-dark) !important; }
+        .bg-mint-soft { background-color: var(--bg-mint-soft) !important; }
+        .text-mint { color: var(--mint-accent) !important; }
+        .text-emerald { color: var(--emerald-main) !important; }
+        .text-navy { color: var(--navy-deep) !important; }
+
+        .btn-mint {
+            background-color: var(--mint-accent);
+            color: var(--navy-dark);
+            font-weight: 700;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        .btn-mint:hover {
+            background-color: var(--mint-hover);
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(52, 211, 153, 0.3);
+        }
+
+        .btn-emerald {
+            background-color: var(--emerald-main);
+            color: #ffffff;
+            font-weight: 600;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        .btn-emerald:hover {
+            background-color: var(--emerald-light);
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(30, 93, 75, 0.3);
+        }
+
+        /* Top Announcement Ticker */
+        .top-banner {
+            background: linear-gradient(90deg, var(--navy-dark) 0%, var(--emerald-main) 100%);
+            color: #ffffff;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Navbar Styling */
+        .navbar-custom {
+            background-color: rgba(26, 42, 58, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--emerald-main);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, rgba(15, 24, 35, 0.92) 0%, rgba(30, 93, 75, 0.85) 100%), 
+                        url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1600&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            padding: 90px 0 70px 0;
+            position: relative;
+        }
+
+        .trust-badge {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(52, 211, 153, 0.3);
+            border-radius: 50px;
+            padding: 8px 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+        }
+
+        /* Feature Cards */
+        .feature-box {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 24px;
+            border-bottom: 4px solid var(--emerald-main);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+        }
+
+        /* Product Cards */
+        .product-card {
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #E2E8F0;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(26, 42, 58, 0.12);
+            border-color: var(--mint-accent);
+        }
+
+        .product-img-wrapper {
+            position: relative;
+            height: 320px;
+            overflow: hidden;
+            background-color: #f1f5f9;
+        }
+        .product-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .product-card:hover .product-img-wrapper img {
+            transform: scale(1.06);
+        }
+
+        .product-badge-group {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            z-index: 2;
+        }
+
+        .badge-squat {
+            background-color: var(--navy-dark);
+            color: var(--mint-accent);
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+            border: 1px solid var(--mint-accent);
+        }
+
+        .badge-dryfit {
+            background-color: var(--emerald-main);
+            color: #ffffff;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        .size-btn {
+            border: 1px solid #CBD5E1;
+            background: #ffffff;
+            color: var(--navy-dark);
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .size-btn.active, .size-btn:hover {
+            background-color: var(--emerald-main);
+            color: #ffffff;
+            border-color: var(--emerald-main);
+        }
+
+        /* Floating Widgets */
+        .floating-container {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 999;
+        }
+
+        .floating-btn {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 26px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+        }
+        .floating-btn:hover {
+            transform: scale(1.12);
+            color: #ffffff;
+        }
+
+        .btn-whatsapp-float {
+            background-color: #25D366;
+        }
+        .btn-instagram-float {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+
+        /* Calculator Card */
+        .calculator-card {
+            background: #ffffff;
+            border-radius: 20px;
+            border: 2px solid var(--emerald-light);
+            box-shadow: 0 10px 30px rgba(30, 93, 75, 0.1);
+        }
+
+        /* Filter Pills */
+        .nav-pills .nav-link {
+            color: var(--navy-deep);
+            font-weight: 600;
+            border-radius: 30px;
+            padding: 8px 20px;
+            border: 1px solid #CBD5E1;
+            margin: 0 4px;
+        }
+        .nav-pills .nav-link.active {
+            background-color: var(--emerald-main);
+            color: #ffffff;
+            border-color: var(--emerald-main);
+        }
+
+        /* Cart Badge */
+        .cart-count {
+            position: absolute;
+            top: -6px;
+            right: -8px;
+            background-color: var(--mint-accent);
+            color: var(--navy-dark);
+            font-size: 0.75rem;
+            font-weight: 800;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-banner py-2 text-center px-3">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+            <div>
+                <i class="fa-solid fa-truck-fast text-mint me-1"></i>
+                <span>Delivery Express Gratis en <strong>San Cristóbal, Táriba y Palmira</strong></span>
+            </div>
+            <div class="d-flex align-items-center gap-3 ms-auto">
+                <span><i class="fa-solid fa-coins text-mint me-1"></i> Tasa BCV Oficial: <strong id="bcv-rate-display">Bs. 36.50 / $</strong></span>
+                <span class="badge bg-emerald text-mint">Envíos Nacionales: MRW, Zoom, Tealca</span>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <div class="bg-emerald p-2 rounded-circle border border-mint">
+                    <i class="fa-solid fa-bolt text-mint fs-4"></i>
+                </div>
+                <div>
+                    <span class="fs-4 fw-bold brand-font text-white tracking-wide">CÓDICE <span class="text-mint">FUSION</span></span>
+                    <div style="font-size: 0.65rem; color: #94A3B8; letter-spacing: 1.5px; margin-top: -4px;">HIGH PERFORMANCE SPORTWEAR</div>
+                </div>
+            </a>
+
+            <div class="d-flex align-items-center gap-2 order-lg-3">
+                <!-- Currency Toggle Button -->
+                <button class="btn btn-sm btn-outline-light d-flex align-items-center gap-1 rounded-pill px-3" onclick="toggleCurrency()" id="currency-toggle-btn">
+                    <i class="fa-solid fa-arrows-rotate text-mint"></i>
+                    <span id="current-currency-text" class="fw-bold">USD ($)</span>
+                </button>
+
+                <!-- Cart Button -->
+                <button class="btn btn-mint position-relative rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#cartModal">
+                    <i class="fa-solid fa-cart-shopping me-1"></i>
+                    <span class="d-none d-sm-inline">Carrito</span>
+                    <span class="cart-count" id="cart-badge-count">0</span>
+                </button>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse justify-content-center order-lg-2" id="navbarNav">
+                <ul class="navbar-nav gap-lg-3">
+                    <li class="nav-item"><a class="nav-link text-white fw-medium" href="#hero">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-medium" href="#calculadora">Calculadora Tallas</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-medium" href="#catalogo">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-medium" href="#logistica">Entregas & Pagos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center gy-5">
+                <div class="col-lg-7">
+                    <div class="trust-badge mb-3">
+                        <i class="fa-solid fa-shield-halved text-mint"></i>
+                        <span>Tejidos Anatómicos 100% Squat-Proof & Dry-Fit</span>
+                    </div>
+                    <h1 class="display-4 fw-extrabold text-white mb-3">
+                        Un espacio donde la moda es un arte y cada prenda es parte de tu historia.
+                    </h1>
+                    <p class="lead text-light opacity-90 mb-4">
+                        Ropa deportiva de alto rendimiento diseñada para <strong>Gym & Fitness, Ciclismo y Running</strong>. Calce anatómico de alta compresión con despacho express en San Cristóbal, Táriba, Palmira y envíos a toda Venezuela.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-3 mb-4">
+                        <a href="#catalogo" class="btn btn-mint btn-lg rounded-pill px-4 py-3">
+                            <i class="fa-solid fa-store me-2"></i>Explorar Colección
+                        </a>
+                        <a href="https://wa.me/584247501066?text=Hola%20C%C3%B3dice%20Fusion%20%F0%9F%90%8B%2C%20quisiera%20asesor%C3%ADa%20personalizada%20sobre%20sus%20prendas%20deportivas." target="_blank" class="btn btn-outline-light btn-lg rounded-pill px-4 py-3 border-2">
+                            <i class="fa-brands fa-whatsapp text-mint me-2 fs-5"></i>Atención Inmediata WhatsApp
+                        </a>
+                    </div>
+
+                    <!-- Trust Seals -->
+                    <div class="pt-3 border-top border-secondary border-opacity-50 d-flex flex-wrap gap-4 text-light font-size-sm">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-check-circle text-mint fs-5"></i>
+                            <span>Reserva activa 24 Horas</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-truck-ramp-box text-mint fs-5"></i>
+                            <span>Delivery Express Táchira</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-money-bill-transfer text-mint fs-5"></i>
+                            <span>Pago Móvil / Cash / Zelle</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 text-center">
+                    <div class="position-relative d-inline-block">
+                        <img id="hero-main-img" src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=80&w=800&auto=format&fit=crop" alt="Códice Fusion Sportswear" class="img-fluid rounded-4 shadow-lg border border-2 border-mint" style="max-height: 480px; object-fit: cover;">
+                        <div class="position-absolute bottom-0 start-0 bg-navy p-3 rounded-4 m-3 text-start border border-emerald border-opacity-50 shadow-lg" style="max-width: 250px;">
+                            <div class="d-flex align-items-center gap-2 mb-1">
+                                <i class="fa-solid fa-fire text-mint"></i>
+                                <span class="text-white fw-bold">Tecnología Dry-Fit</span>
+                            </div>
+                            <small class="text-muted text-light opacity-75">Secado ultrarrápido y máxima transpirabilidad durante entrenamientos exigentes.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4 bg-navy text-white">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-6 col-md-3">
+                    <div class="p-3">
+                        <i class="fa-solid fa-eye-slash text-mint fs-2 mb-2"></i>
+                        <h6 class="fw-bold mb-1">100% Squat-Proof</h6>
+                        <small class="text-light opacity-75">Cero transparencias al realizar sentadillas profundas.</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="p-3">
+                        <i class="fa-solid fa-droplet-slash text-mint fs-2 mb-2"></i>
+                        <h6 class="fw-bold mb-1">Compresión Dry-Fit</h6>
+                        <small class="text-light opacity-75">Control de humedad y ajuste muscular ideal.</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="p-3">
+                        <i class="fa-solid fa-clock-rotate-left text-mint fs-2 mb-2"></i>
+                        <h6 class="fw-bold mb-1">Reserva 24 Horas</h6>
+                        <small class="text-light opacity-75">Garantiza tu prenda mientras coordinas el pago.</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="p-3">
+                        <i class="fa-solid fa-motorcycle text-mint fs-2 mb-2"></i>
+                        <h6 class="fw-bold mb-1">Delivery Táchira</h6>
+                        <small class="text-light opacity-75">Envíos directos a San Cristóbal, Táriba y Palmira.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculadora" class="py-5 bg-mint-soft">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-4">
+                <div class="col-lg-8">
+                    <span class="badge bg-emerald text-mint px-3 py-2 rounded-pill mb-2">Ajuste Anatómico Perfecto</span>
+                    <h2 class="text-navy fw-bold">Calculadora Interactiva de Tallas</h2>
+                    <p class="text-muted">Elimina la indecisión de compra. Ingresa tus medidas corporales en centímetros y obtén tu recomendación exacta para Gym, Ciclismo o Running.</p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="calculator-card p-4 p-md-5">
+                        <form id="size-calc-form" onsubmit="calculateSize(event)">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold text-navy"><i class="fa-solid fa-venus-mars text-emerald me-1"></i> Género</label>
+                                    <select class="form-select border-2" id="calc-gender" required>
+                                        <option value="damas">Damas</option>
+                                        <option value="caballeros">Caballeros</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold text-navy"><i class="fa-solid fa-person-running text-emerald me-1"></i> Disciplina Principal</label>
+                                    <select class="form-select border-2" id="calc-discipline">
+                                        <option value="gym">Gym & Fitness (Alta Compresión)</option>
+                                        <option value="cycling">Ciclismo (Ajuste Aerodinámico)</option>
+                                        <option value="running">Running (Sensación Ligera)</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label fw-bold text-navy">Busto / Pecho (cm)</label>
+                                    <input type="number" class="form-input form-control border-2" id="calc-bust" placeholder="ej. 90" min="60" max="140" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label fw-bold text-navy">Cintura (cm)</label>
+                                    <input type="number" class="form-input form-control border-2" id="calc-waist" placeholder="ej. 70" min="50" max="130" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label fw-bold text-navy">Cadera (cm)</label>
+                                    <input type="number" class="form-input form-control border-2" id="calc-hip" placeholder="ej. 98" min="60" max="150" required>
+                                </div>
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn btn-emerald btn-lg px-5 rounded-pill">
+                                        <i class="fa-solid fa-calculator me-2"></i>Calcular Mi Talla Ideal
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- Size Result Output -->
+                        <div id="size-result" class="mt-4 p-4 rounded-3 text-center d-none" style="background-color: var(--navy-deep); color: white;">
+                            <h5 class="text-mint fw-bold mb-2"><i class="fa-solid fa-circle-check me-2"></i>Tu Talla Recomendada es: <span id="recommended-size" class="fs-2 text-white border-bottom border-mint border-2 px-2">M</span></h5>
+                            <p class="mb-0 text-light opacity-90" id="size-recommendation-note">
+                                Para una mayor compresión en rutinas de alto impacto recomendamos esta talla. Si prefieres soltura para rutas largas, considera escalar una talla adicional.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="catalogo" class="py-5">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 gap-3">
+                <div>
+                    <h2 class="text-navy fw-bold mb-1">Catálogo de Alto Rendimiento</h2>
+                    <p class="text-muted mb-0">Selecciona tu talla y agrega prendas directamente a tu carrito de reserva.</p>
+                </div>
+
+                <!-- Filter Pills -->
+                <ul class="nav nav-pills" id="catalog-filters">
+                    <li class="nav-item"><a class="nav-link active" href="#" onclick="filterProducts('all', event)">Todos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="filterProducts('damas', event)">Damas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="filterProducts('caballeros', event)">Caballeros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="filterProducts('gym', event)">Gym</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="filterProducts('cycling', event)">Cycling</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="filterProducts('running', event)">Running</a></li>
+                </ul>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="row g-4" id="product-grid">
+                <!-- Products dynamically rendered via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="logistica" class="py-5 bg-navy text-white">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <span class="badge bg-emerald text-mint px-3 py-2 rounded-pill mb-2">Compra Confiable & Rápida</span>
+                    <h2 class="fw-bold text-white">Métodos de Pago Locales & Cobertura Logística</h2>
+                    <p class="text-light opacity-75">Adaptados a la realidad económica tachirense para garantizar tu comodidad.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Payment Methods Card -->
+                <div class="col-md-6">
+                    <div class="p-4 rounded-4 h-100" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(52,211,153,0.2);">
+                        <h4 class="text-mint fw-bold mb-3"><i class="fa-solid fa-wallet me-2"></i>Métodos de Pago Soportados</h4>
+                        <ul class="list-unstyled d-flex flex-column gap-3">
+                            <li class="d-flex align-items-center gap-3">
+                                <div class="bg-emerald p-2 rounded text-mint"><i class="fa-solid fa-mobile-screen-button fs-4"></i></div>
+                                <div>
+                                    <strong>Pago Móvil:</strong> Tasa oficial del BCV del día con actualización automática.
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center gap-3">
+                                <div class="bg-emerald p-2 rounded text-mint"><i class="fa-solid fa-building-columns fs-4"></i></div>
+                                <div>
+                                    <strong>Zelle:</strong> Transferencias directas en USD sin recargos.
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center gap-3">
+                                <div class="bg-emerald p-2 rounded text-mint"><i class="fa-solid fa-dollar-sign fs-4"></i></div>
+                                <div>
+                                    <strong>Efectivo en Divisas:</strong> Aceptado al momento de recibir el Delivery en San Cristóbal, Táriba o Palmira.
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center gap-3">
+                                <div class="bg-emerald p-2 rounded text-mint"><i class="fa-solid fa-credit-card fs-4"></i></div>
+                                <div>
+                                    <strong>Zinli & Binance Pay (USDT):</strong> Transferencias digitales instantáneas y seguras.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Shipping Options Card -->
+                <div class="col-md-6">
+                    <div class="p-4 rounded-4 h-100" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(52,211,153,0.2);">
+                        <h4 class="text-mint fw-bold mb-3"><i class="fa-solid fa-truck-fast me-2"></i>Opciones de Despacho</h4>
+                        <div class="mb-4">
+                            <h6 class="fw-bold text-white mb-1"><i class="fa-solid fa-location-dot text-mint me-2"></i>Delivery Express (24 Horas)</h6>
+                            <p class="text-light opacity-75 small">Cobertura directa en la zona metropolitana: San Cristóbal, Táriba y Palmira. Entrega en la puerta de tu residencia o gimnasio.</p>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold text-white mb-1"><i class="fa-solid fa-boxes-packing text-mint me-2"></i>Envíos Nacionales y Regionales</h6>
+                            <p class="text-light opacity-75 small">Despachos asegurados a cualquier estado del país a través de <strong>MRW, Zoom y Tealca</strong> con número de guía inmediato.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-navy-dark text-white py-4 border-top border-secondary border-opacity-25">
+        <div class="container text-center text-md-start">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <span class="fs-5 fw-bold brand-font">CÓDICE <span class="text-mint">FUSION</span></span>
+                    <p class="text-muted small mb-0">Ropa Deportiva de Alto Rendimiento | San Cristóbal, Táchira - Venezuela</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="https://instagram.com/codicefusion" target="_blank" class="text-light me-3 text-decoration-none">
+                        <i class="fa-brands fa-instagram text-mint me-1"></i>@codicefusion
+                    </a>
+                    <a href="https://wa.me/584247501066" target="_blank" class="text-light text-decoration-none">
+                        <i class="fa-brands fa-whatsapp text-mint me-1"></i>+58 424-7501066
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-container">
+        <!-- Instagram Floating Widget -->
+        <a href="https://instagram.com/codicefusion" target="_blank" class="floating-btn btn-instagram-float" title="Síguenos en Instagram @codicefusion">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <!-- WhatsApp Floating Chat Widget -->
+        <a href="https://wa.me/584247501066?text=Hola%20C%C3%B3dice%20Fusion%20%F0%9F%90%8B%2C%20quisiera%20consultar%20disponibilidad%20de%20prendas." target="_blank" class="floating-btn btn-whatsapp-float" title="Chat directo por WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 rounded-4 shadow-lg">
+                <div class="modal-header bg-navy text-white rounded-top-4">
+                    <h5 class="modal-title fw-bold"><i class="fa-solid fa-cart-shopping text-mint me-2"></i>Tu Carrito de Compras</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div id="cart-items-container">
+                        <!-- Cart Items loaded dynamically -->
+                    </div>
+
+                    <hr class="my-4">
+
+                    <!-- Customer Order Details Form -->
+                    <form id="checkout-form">
+                        <h6 class="fw-bold text-navy mb-3"><i class="fa-solid fa-user me-2"></i>Datos para la Entrega / Reserva</h6>
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label small fw-bold">Nombre Completo</label>
+                                <input type="text" id="cust-name" class="form-control" placeholder="ej. María Rodríguez" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label small fw-bold">Ubicación / Municipio</label>
+                                <select id="cust-location" class="form-select" required>
+                                    <option value="San Cristóbal">San Cristóbal (Delivery Express)</option>
+                                    <option value="Táriba">Táriba (Delivery Express)</option>
+                                    <option value="Palmira">Palmira (Delivery Express)</option>
+                                    <option value="Otro Municipio Táchira">Otro Municipio (Táchira)</option>
+                                    <option value="Envío Nacional (MRW/Zoom/Tealca)">Envío Nacional (MRW/Zoom/Tealca)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Order Summary Box -->
+                        <div class="bg-mint-soft p-3 rounded-3 mb-4">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="fw-bold text-navy">Total Estimado USD:</span>
+                                <span class="fs-4 fw-extrabold text-emerald" id="modal-total-usd">$0.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="small text-muted">Total Estimado Bolívares (Tasa BCV):</span>
+                                <span class="fw-bold text-navy" id="modal-total-bs">Bs. 0.00</span>
+                            </div>
+                        </div>
+
+                        <!-- Dual Action Buttons: Reserve 24h vs Immediate Buy -->
+                        <div class="row g-2">
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-outline-dark w-100 py-3 rounded-pill fw-bold" onclick="processCheckout('RESERVA POR 24 HORAS')">
+                                    <i class="fa-solid fa-clock-rotate-left me-2 text-emerald"></i>Reservar por 24h
+                                </button>
+                                <small class="d-block text-center text-muted mt-1" style="font-size: 0.75rem;">Garantiza prenda y talla mientras pagas</small>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-mint w-100 py-3 rounded-pill fw-bold" onclick="processCheckout('COMPRA INMEDIATA')">
+                                    <i class="fa-brands fa-whatsapp me-2"></i>Comprar Ahora
+                                </button>
+                                <small class="d-block text-center text-muted mt-1" style="font-size: 0.75rem;">Envía la orden directa para entrega express</small>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Global Application State
+        const BCV_RATE = 36.50; // Daily Official Rate
+        let currentCurrency = 'USD'; // 'USD' or 'BS'
+        let selectedFilter = 'all';
+
+        // Sportswear Catalog Data
+        const products = [
+            {
+                id: 'prod-1',
+                name: 'Legging Sculpt Pro High-Waist',
+                category: 'gym',
+                gender: 'damas',
+                priceUSD: 28.00,
+                image: 'https://images.unsplash.com/photo-1506629082955-511b1aa562c8?q=80&w=600&auto=format&fit=crop',
+                squatProof: true,
+                dryFit: true,
+                availableSizes: ['XS', 'S', 'M', 'L']
+            },
+            {
+                id: 'prod-2',
+                name: 'Top Deportivo High-Impact Aero',
+                category: 'gym',
+                gender: 'damas',
+                priceUSD: 18.00,
+                image: 'https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=80&w=600&auto=format&fit=crop',
+                squatProof: false,
+                dryFit: true,
+                availableSizes: ['S', 'M', 'L']
+            },
+            {
+                id: 'prod-3',
+                name: 'Conjunto Ciclismo Pro Team Jersey',
+                category: 'cycling',
+                gender: 'caballeros',
+                priceUSD: 45.00,
+                image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=600&auto=format&fit=crop',
+                squatProof: false,
+                dryFit: true,
+                availableSizes: ['S', 'M', 'L', 'XL']
+            },
+            {
+                id: 'prod-4',
+                name: 'Short Running Fast-Dry Dual Layer',
+                category: 'running',
+                gender: 'caballeros',
+                priceUSD: 22.00,
+                image: 'https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=600&auto=format&fit=crop',
+                squatProof: true,
+                dryFit: true,
+                availableSizes: ['S', 'M', 'L', 'XL']
+            },
+            {
+                id: 'prod-5',
+                name: 'Biker Short Compresión Seamless',
+                category: 'gym',
+                gender: 'damas',
+                priceUSD: 24.00,
+                image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=600&auto=format&fit=crop',
+                squatProof: true,
+                dryFit: true,
+                availableSizes: ['XS', 'S', 'M']
+            },
+            {
+                id: 'prod-6',
+                name: 'Franela Tech Ultra Light Running',
+                category: 'running',
+                gender: 'caballeros',
+                priceUSD: 16.00,
+                image: 'https://images.unsplash.com/photo-1581655353564-df123a1eb820?q=80&w=600&auto=format&fit=crop',
+                squatProof: false,
+                dryFit: true,
+                availableSizes: ['S', 'M', 'L', 'XL']
+            }
+        ];
+
+        // Shopping Cart State
+        let cart = [];
+
+        // Initialize App on DOM Load
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('bcv-rate-display').textContent = `Bs. ${BCV_RATE.toFixed(2)} / $`;
+            renderCatalog();
+            updateCartUI();
+        });
+
+        // Toggle Currency Function ($ USD vs Bs)
+        function toggleCurrency() {
+            currentCurrency = currentCurrency === 'USD' ? 'BS' : 'USD';
+            document.getElementById('current-currency-text').textContent = currentCurrency === 'USD' ? 'USD ($)' : 'Bolívares (Bs)';
+            renderCatalog();
+            updateCartUI();
+        }
+
+        // Helper: Format Price
+        function formatPrice(priceUSD) {
+            if (currentCurrency === 'USD') {
+                return `$${priceUSD.toFixed(2)}`;
+            } else {
+                const priceBs = priceUSD * BCV_RATE;
+                return `Bs. ${priceBs.toLocaleString('es-VE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+            }
+        }
+
+        // Render Catalog Grid
+        function renderCatalog() {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = '';
+
+            const filtered = products.filter(p => {
+                if (selectedFilter === 'all') return true;
+                if (selectedFilter === 'damas' || selectedFilter === 'caballeros') return p.gender === selectedFilter;
+                return p.category === selectedFilter;
+            });
+
+            filtered.forEach(product => {
+                const col = document.createElement('div');
+                col.className = 'col-12 col-sm-6 col-lg-4';
+
+                // Size options HTML
+                const sizesHTML = product.availableSizes.map((size, idx) => `
+                    <button type="button" class="size-btn ${idx === 0 ? 'active' : ''}" onclick="selectProductSize('${product.id}', '${size}', this)">${size}</button>
+                `).join('');
+
+                col.innerHTML = `
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <div class="product-badge-group">
+                                ${product.squatProof ? '<span class="badge-squat"><i class="fa-solid fa-shield-halved me-1"></i>SQUAT-PROOF</span>' : ''}
+                                ${product.dryFit ? '<span class="badge-dryfit"><i class="fa-solid fa-bolt me-1"></i>DRY-FIT</span>' : ''}
+                            </div>
+                            <img src="${product.image}" alt="${product.name}" loading="lazy" onerror="this.src='https://placehold.co/600x600/1E5D4B/FFFFFF?text=Codice+Fusion'">
+                        </div>
+                        <div class="p-3 d-flex flex-column flex-grow-1">
+                            <span class="text-uppercase text-muted fw-bold small mb-1">${product.category} | ${product.gender}</span>
+                            <h5 class="fw-bold text-navy mb-2">${product.name}</h5>
+                            
+                            <div class="mb-3">
+                                <label class="small text-muted fw-semibold d-block mb-1">Selecciona Talla:</label>
+                                <div class="d-flex gap-1" id="sizes-group-${product.id}">
+                                    ${sizesHTML}
+                                </div>
+                            </div>
+
+                            <div class="mt-auto d-flex align-items-center justify-content-between pt-2 border-top">
+                                <div>
+                                    <span class="fs-5 fw-extrabold text-emerald">${formatPrice(product.priceUSD)}</span>
+                                    <small class="d-block text-muted" style="font-size: 0.75rem;">Ref: $${product.priceUSD.toFixed(2)} USD</small>
+                                </div>
+                                <button type="button" class="btn btn-mint btn-sm rounded-pill px-3" onclick="addToCart('${product.id}')">
+                                    <i class="fa-solid fa-cart-plus me-1"></i>Agregar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(col);
+            });
+        }
+
+        // Handle Size Selection in Catalog
+        const selectedSizes = {};
+        function selectProductSize(productId, size, btnElement) {
+            selectedSizes[productId] = size;
+            const container = document.getElementById(`sizes-group-${productId}`);
+            if (container) {
+                container.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+                btnElement.classList.add('active');
+            }
+        }
+
+        // Filter Products Handler
+        function filterProducts(category, event) {
+            event.preventDefault();
+            selectedFilter = category;
+            
+            // Update active state in nav pills
+            document.querySelectorAll('#catalog-filters .nav-link').forEach(link => link.classList.remove('active'));
+            event.target.classList.add('active');
+
+            renderCatalog();
+        }
+
+        // Size Calculator Logic
+        function calculateSize(event) {
+            event.preventDefault();
+            const gender = document.getElementById('calc-gender').value;
+            const bust = parseFloat(document.getElementById('calc-bust').value);
+            const waist = parseFloat(document.getElementById('calc-waist').value);
+            const hip = parseFloat(document.getElementById('calc-hip').value);
+
+            let recommended = 'M';
+
+            if (gender === 'damas') {
+                if (waist < 66 && hip < 92) recommended = 'XS';
+                else if (waist <= 72 && hip <= 98) recommended = 'S';
+                else if (waist <= 80 && hip <= 106) recommended = 'M';
+                else recommended = 'L';
+            } else {
+                if (bust < 90 && waist < 78) recommended = 'S';
+                else if (bust <= 98 && waist <= 86) recommended = 'M';
+                else if (bust <= 106 && waist <= 94) recommended = 'L';
+                else recommended = 'XL';
+            }
+
+            document.getElementById('recommended-size').textContent = recommended;
+            const resultBox = document.getElementById('size-result');
+            resultBox.classList.remove('d-none');
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // Cart Logic
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+
+            const size = selectedSizes[productId] || product.availableSizes[0];
+
+            // Check if same product & size exists in cart
+            const existingIndex = cart.findIndex(item => item.id === productId && item.size === size);
+
+            if (existingIndex > -1) {
+                cart[existingIndex].quantity += 1;
+            } else {
+                cart.push({
+                    id: product.id,
+                    name: product.name,
+                    priceUSD: product.priceUSD,
+                    size: size,
+                    quantity: 1
+                });
+            }
+
+            updateCartUI();
+            
+            // Trigger visual feedback
+            const modalEl = document.getElementById('cartModal');
+            const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+            modal.show();
+        }
+
+        function updateQuantity(index, delta) {
+            if (cart[index]) {
+                cart[index].quantity += delta;
+                if (cart[index].quantity <= 0) {
+                    cart.splice(index, 1);
+                }
+                updateCartUI();
+            }
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const badge = document.getElementById('cart-badge-count');
+            const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+            badge.textContent = totalItems;
+
+            const container = document.getElementById('cart-items-container');
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-4">
+                        <i class="fa-solid fa-basket-shopping text-muted fs-1 mb-2"></i>
+                        <p class="text-muted">Tu carrito está vacío en este momento.</p>
+                    </div>
+                `;
+                document.getElementById('modal-total-usd').textContent = '$0.00';
+                document.getElementById('modal-total-bs').textContent = 'Bs. 0.00';
+                return;
+            }
+
+            let totalUSD = 0;
+            let html = '<div class="table-responsive"><table class="table align-middle"><thead><tr><th>Producto</th><th>Talla</th><th>Cant.</th><th>Precio</th><th></th></tr></thead><tbody>';
+
+            cart.forEach((item, idx) => {
+                const itemTotal = item.priceUSD * item.quantity;
+                totalUSD += itemTotal;
+
+                html += `
+                    <tr>
+                        <td class="fw-bold text-navy">${item.name}</td>
+                        <td><span class="badge bg-emerald text-mint">${item.size}</span></td>
+                        <td>
+                            <div class="d-flex align-items-center gap-1">
+                                <button type="button" class="btn btn-sm btn-outline-secondary py-0 px-2" onclick="updateQuantity(${idx}, -1)">-</button>
+                                <span>${item.quantity}</span>
+                                <button type="button" class="btn btn-sm btn-outline-secondary py-0 px-2" onclick="updateQuantity(${idx}, 1)">+</button>
+                            </div>
+                        </td>
+                        <td class="fw-bold">${formatPrice(itemTotal)}</td>
+                        <td>
+                            <button type="button" class="btn btn-sm text-danger" onclick="removeFromCart(${idx})">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            html += '</tbody></table></div>';
+            container.innerHTML = html;
+
+            const totalBs = totalUSD * BCV_RATE;
+            document.getElementById('modal-total-usd').textContent = `$${totalUSD.toFixed(2)} USD`;
+            document.getElementById('modal-total-bs').textContent = `Bs. ${totalBs.toLocaleString('es-VE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+        }
+
+        function processCheckout(orderType) {
+            if (cart.length === 0) {
+                alert('Agrega al menos una prenda al carrito para continuar.');
+                return;
+            }
+
+            const name = document.getElementById('cust-name').value.trim();
+            const location = document.getElementById('cust-location').value;
+
+            if (!name) {
+                alert('Por favor ingresa tu nombre para procesar la orden.');
+                return;
+            }
+
+            let totalUSD = cart.reduce((sum, i) => sum + (i.priceUSD * i.quantity), 0);
+            let totalBs = totalUSD * BCV_RATE;
+
+            // Construct structured message matching documentation section 4
+            let itemsDetail = cart.map(item => `• ${item.name} [Talla: ${item.size}] x${item.quantity} ($${(item.priceUSD * item.quantity).toFixed(2)})`).join('\n');
+
+            let message = `Hola Códice Fusion 👋, quisiera realizar un PEDIDO DE COMPRA / ${orderType} con envío a ${location}:\n\n` +
+                          `Cliente: ${name}\n` +
+                          `Ubicación: ${location}\n\n` +
+                          `Detalle de Productos:\n${itemsDetail}\n\n` +
+                          `Total Estimado: $${totalUSD.toFixed(2)} USD (Ref. BCV: Bs. ${totalBs.toLocaleString('es-VE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })})\n\n` +
+                          `¿Me podrían indicar los datos para realizar el Pago Móvil o Zelle? Gracias.`;
+
+            // WhatsApp Web API URL (+584247501066)
+            const encodedMsg = encodeURIComponent(message);
+            const waUrl = `https://wa.me/584247501066?text=${encodedMsg}`;
+
+            // Open WhatsApp directly
+            window.open(waUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
